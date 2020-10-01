@@ -1,18 +1,18 @@
 #include <bits/stdc++.h>
-
+#include<iostream>
 using namespace std;
 
 template<typename T>
 void selection(T arr[], int size) {
-    T Max;
+    T Maximum;
     int max_ind;
 
     for (int i = size - 1; i >= 1; --i) {
-        Max = -1;
+        Maximum = -1;
         max_ind = i;
         for (int j = i; j >= 0; --j) {
             if (arr[j] > Max) {
-                Max = arr[j];
+                Maximum = arr[j];
                 max_ind = j;
             }
         }
