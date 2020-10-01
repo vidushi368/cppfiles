@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
-
+#include<iostrem>
 using namespace std;
 
-int evaluate(char x) {
+int eval(char x) {
     if (x == '^')
         return 3;
     if (x == '/' || x == '*')
@@ -30,7 +30,7 @@ void convert(const string &str) {
             }
             q.pop();
         } else {
-            while (!q.empty() and evaluate(q.top()) >= evaluate(word)) {
+            while (!q.empty() and eval(q.top()) >= eval(word)) {
                 cout << q.top();
                 q.pop();
             }
